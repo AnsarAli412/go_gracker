@@ -97,6 +97,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
     location.getLocation().then(
       (location) {
         currentLocation = location;
+        setState(() {});
       },
     );
     GoogleMapController googleMapController = await _controller.future;
